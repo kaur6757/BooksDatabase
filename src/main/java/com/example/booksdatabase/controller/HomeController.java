@@ -16,7 +16,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        model.addAttribute("book", new Books());
+        model.addAttribute("books", new Books());
         return "addBook";
     }
 
