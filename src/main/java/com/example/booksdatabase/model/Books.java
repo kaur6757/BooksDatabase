@@ -21,8 +21,7 @@ public class Books {
     }
 
     //Constructor
-    public Books(Long id, String title, String authorName, double price) {
-        this.id = id;
+    public Books(String title, String authorName, double price) {
         this.title = title;
         this.authorName = authorName;
         this.price = price;
