@@ -1,9 +1,6 @@
 package com.example.booksdatabase.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Review {
@@ -21,9 +18,9 @@ public class Review {
     //Default constructor
     public Review() {
     }
-    public Review(Long id, Long bookId, String reviewerName, int rating, String comment) {
+
+    public Review(Long id, String reviewerName, int rating, String comment) {
         this.id = id;
-        this.bookId = bookId;
         this.reviewerName = reviewerName;
         this.rating = rating;
         this.comment = comment;
@@ -37,14 +34,6 @@ public class Review {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Long getBookId() {
-        return bookId;
-    }
-
-    public void setBookId(Long bookId) {
-        this.bookId = bookId;
     }
 
     public String getReviewerName() {
@@ -69,5 +58,13 @@ public class Review {
 
     public void setComment(String comment) {
         this.comment = comment;
+    }
+
+    public Long getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 }

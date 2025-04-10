@@ -3,6 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>Add Book</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fff8f0;
+            margin: 0;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            font-size: 32px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        form {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-size: 16px;
+            color: #2c3e50;
+        }
+
+        input[type="text"] {
+            padding: 10px 12px;
+            font-size: 16px;
+            border: 1px solid #d3b894;
+            border-radius: 5px;
+            background-color: #f9f1e3;
+            transition: border-color 0.3s ease-in-out;
+        }
+
+        input[type="text"]:focus {
+            outline: none;
+            border-color: #6a4e23;
+        }
+
+        button {
+            align-self: center;
+            margin-top: 15px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #6a4e23;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #7c5d3b;
+        }
+    </style>
 </head>
 <body>
 <h1>Add a New Book</h1>

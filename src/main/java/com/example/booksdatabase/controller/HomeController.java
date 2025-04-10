@@ -29,9 +29,11 @@ public class HomeController {
 
     @PostConstruct
     public void init() {
-        // Create and save initial book data
-        bookService.saveBook(new Books("Book 1", "Author 1", 19.99));
-        bookService.saveBook(new Books("Book 2", "Author 2", 29.99));
-        bookService.saveBook(new Books("Book 3", "Author 3", 39.99));
+        if (bookService.getAllBooks().isEmpty()) {
+            // Seed only if the books table is empty
+            bookService.saveBook(new Books("Journey Through Heartsongs", "Stepanek, Mattie J. T", 19.99));
+            bookService.saveBook(new Books("Dragons of Autumn Twilight", "Margaret Weis", 29.99));
+            bookService.saveBook(new Books("The Road", "Cormac McCarthy", 16.99));
+        }
     }
 }
